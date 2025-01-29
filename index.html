@@ -1,111 +1,248 @@
 <!DOCTYPE html>
-<html lang="es" class="light">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WormBook - The Online Review of C. elegans Biology</title>
+    <title>C. elegans: El Nematodo Modelo</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="dynamic-background"></div>
     <header>
-    <div class="theme-toggle fixed">
-        <button id="theme-toggle-btn">
-            <i class="fas fa-moon"></i>
+        <h1>Caenorhabditis elegans</h1>
+        <button id="theme-toggle" aria-label="Cambiar modo oscuro">🌓</button>
+        <button id="menu-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-    </div>
-    <div class="animated-header">
-        <h1 class="fade-in-text">WormBook</h1>
-        <p class="subtitle fade-in-text">THE ONLINE REVIEW OF C. elegans BIOLOGY</p>
-    </div>
-    <nav class="navbar">
-        <button class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="nav-links">
-            <a href="#" class="active"><i class="fas fa-home"></i> Hogar</a>
-            <a href="#"><i class="fas fa-info-circle"></i> Acerca de</a>
-            <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
-            <a href="#"><i class="fas fa-quote-right"></i> Citar WormBook</a>
-            <a href="#"><i class="fas fa-users"></i> Para autores</a>
-            <a href="#"><i class="fas fa-download"></i> Descargas</a>
-            <a href="#"><i class="fas fa-handshake"></i> Patrocinadores</a>
-        </div>
-    </nav>
-</header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#anatomia">Anatomía</a></li>
+                <li><a href="#ciclo-vida">Ciclo de Vida</a></li>
+                <li><a href="#genetica">Genética</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="#descubrimientos">Descubrimientos</a></li>
+                <li><a href="#datos-curiosos">Datos Curiosos</a></li>
+                <li><a href="#mas-informacion">Más Información</a></li>
+                <li><a href="#efectos-sustancias">Efectos de Sustancias</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <main class="parallax">
-        <section class="search-section">
-            <div class="search-container">
-                <form id="search-form">
-                    <div class="format-options">
-                        <label><input type="checkbox" checked> HTML</label>
-                        <label><input type="checkbox"> PDF</label>
-                    </div>
-                    <div class="search-box">
-                        <input type="search" placeholder="Buscar en WormBook...">
-                        <button type="submit">Buscar</button>
-                    </div>
-                    <div class="search-alt">
-                        <span>o</span>
-                        <a href="#" class="textpresso-link">busca con Textpresso</a>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <section class="content">
-            <div class="description">
-                <p>WormBook es una colección completa y de acceso abierto de capítulos originales revisados por pares que cubren temas relacionados con la biología de <em>Caenorhabditis elegans</em> y otros nematodos.</p>
-            </div>
-
-            <div class="sections">
-                <h2>Secciones de WormBook</h2>
-                <div class="topics-grid">
-                    <div class="topic-card">
-                        <div class="card-image">
-                            <i class="fas fa-dna"></i>
-                        </div>
-                        <h3>Genética y genómica</h3>
-                    </div>
-                    <div class="topic-card">
-                        <div class="card-image">
-                            <i class="fas fa-microscope"></i>
-                        </div>
-                        <h3>Control del desarrollo</h3>
-                    </div>
-                    <div class="topic-card">
-                        <div class="card-image">
-                            <i class="fas fa-project-diagram"></i>
-                        </div>
-                        <h3>Transducción de señales</h3>
-                    </div>
-                    <div class="topic-card">
-                        <div class="card-image">
-                            <i class="fas fa-atom"></i>
-                        </div>
-                        <h3>Biología molecular</h3>
-                    </div>
-                    <div class="topic-card">
-                        <div class="card-image">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Neurobiología</h3>
-                    </div>
-                    <div class="topic-card">
-                        <div class="card-image">
-                            <i class="fas fa-dna"></i>
-                        </div>
-                        <h3>Evolución y ecología</h3>
-                    </div>
+    <main>
+        <section id="inicio" class="active">
+            <h2>Bienvenido al mundo de C. elegans</h2>
+            <div id="nematodo-container">
+                <canvas id="nematodo-canvas"></canvas>
+                <div id="nematodo-description">
+                    <h3>Caenorhabditis elegans</h3>
+                    <p>C. elegans es un pequeño nematodo transparente de aproximadamente 1 mm de longitud. Este organismo modelo ha revolucionado la investigación en genética, neurobiología y biología del desarrollo.</p>
+                    <ul>
+                        <li>Longitud: ~1 mm</li>
+                        <li>Células: 959 (hermafrodita)</li>
+                        <li>Neuronas: 302</li>
+                        <li>Ciclo de vida: 3-4 días</li>
+                        <li>Genoma: ~100 millones de pares de bases</li>
+                        <li>Cromosomas: 6 (5 autosomas + 1 sexual)</li>
+                    </ul>
                 </div>
             </div>
+            <div class="introduction">
+                <p>Caenorhabditis elegans, comúnmente conocido como C. elegans, es un nematodo de vida libre que se ha convertido en un organismo modelo fundamental en la investigación biológica. Descubierto por Sydney Brenner en la década de 1960, este pequeño gusano ha contribuido enormemente a nuestra comprensión de la genética, el desarrollo y la neurobiología.</p>
+                <p>Su simplicidad, transparencia y rápido ciclo de vida lo convierten en un organismo ideal para estudios de laboratorio. Además, comparte muchos genes y procesos biológicos con los humanos, lo que lo hace valioso para la investigación biomédica.</p>
+                <p>C. elegans ha sido fundamental en el estudio de la apoptosis, el desarrollo embrionario, la señalización celular y el envejecimiento. Su uso en investigación ha llevado a tres Premios Nobel, destacando su importancia en la ciencia moderna.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Adult_Caenorhabditis_elegans.jpg/640px-Adult_Caenorhabditis_elegans.jpg" alt="C. elegans" class="main-image">
+            </div>
         </section>
+
+        <section id="anatomia">
+            <h2>Anatomía</h2>
+            <p>C. elegans tiene una anatomía simple pero completa, que incluye sistemas digestivo, reproductivo y nervioso. Su cuerpo transparente permite la observación directa de procesos internos.</p>
+            <ul>
+                <li><strong>Longitud:</strong> Aproximadamente 1 mm</li>
+                <li><strong>Cuerpo:</strong> Cilíndrico y transparente, con una cutícula que actúa como exoesqueleto</li>
+                <li><strong>Sistema nervioso:</strong> 302 neuronas en hermafroditas (383 en machos)</li>
+                <li><strong>Sistema digestivo:</strong> Boca, faringe, intestino y ano</li>
+                <li><strong>Sistema reproductivo:</strong> Gónadas en forma de U, útero y vulva en hermafroditas; testículos y estructuras copulatorias en machos</li>
+                <li><strong>Musculatura:</strong> 95 células musculares corporales organizadas en cuatro cuadrantes longitudinales</li>
+                <li><strong>Sistema excretor:</strong> Cuatro células que forman un sistema simple de osmorregulación</li>
+                <li><strong>Pseudoceloma:</strong> Cavidad corporal llena de líquido que actúa como sistema hidrostático</li>
+            </ul>
+            <p>Los hermafroditas adultos tienen exactamente 959 células somáticas, mientras que los machos tienen 1031. Esta precisión en el número de células ha permitido el mapeo completo del linaje celular desde el huevo hasta el adulto.</p>
+            <p>La transparencia del cuerpo de C. elegans es una característica crucial que permite a los investigadores observar procesos celulares y del desarrollo en tiempo real, utilizando técnicas de microscopía avanzadas y marcadores fluorescentes.</p>
+            <p>El sistema nervioso de C. elegans, a pesar de su simplicidad, es capaz de procesar información sensorial compleja y coordinar respuestas motoras sofisticadas. Incluye diferentes tipos de neuronas sensoriales, interneuronas y motoneuronas, todas interconectadas en un patrón específico y reproducible.</p>
+        </section>
+
+        <section id="ciclo-vida">
+            <h2>Ciclo de Vida</h2>
+            <p>El ciclo de vida de C. elegans es rápido, durando aproximadamente 3-4 días en condiciones óptimas (20°C). Este corto ciclo de vida lo hace ideal para estudios genéticos y del desarrollo.</p>
+            <ol>
+                <li><strong>Embrión:</strong> (0-14 horas)
+                    <ul>
+                        <li>Desarrollo embrionario dentro del huevo</li>
+                        <li>Gastrulación y organogénesis temprana</li>
+                    </ul>
+                </li>
+                <li><strong>Larva L1:</strong> (14-26 horas)
+                    <ul>
+                        <li>Eclosión del huevo</li>
+                        <li>Inicio de la alimentación independiente</li>
+                        <li>Desarrollo de estructuras post-embrionarias</li>
+                    </ul>
+                </li>
+                <li><strong>Larva L2:</strong> (26-34 horas)
+                    <ul>
+                        <li>Crecimiento y desarrollo continuo</li>
+                        <li>Formación de la gónada primordial</li>
+                    </ul>
+                </li>
+                <li><strong>Larva L3:</strong> (34-42 horas)
+                    <ul>
+                        <li>Desarrollo de estructuras sexuales</li>
+                        <li>Crecimiento significativo</li>
+                    </ul>
+                </li>
+                <li><strong>Larva L4:</strong> (42-52 horas)
+                    <ul>
+                        <li>Maduración de órganos reproductivos</li>
+                        <li>Diferenciación sexual completa</li>
+                    </ul>
+                </li>
+                <li><strong>Adulto joven:</strong> (52-60 horas)
+                    <ul>
+                        <li>Madurez sexual alcanzada</li>
+                        <li>Inicio de la producción de gametos</li>
+                    </ul>
+                </li>
+                <li><strong>Adulto:</strong> (60 horas - 2-3 semanas)
+                    <ul>
+                        <li>Reproducción activa (hasta 300 descendientes)</li>
+                        <li>Envejecimiento gradual</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>En condiciones de estrés (falta de alimento, alta temperatura o hacinamiento), las larvas L1 pueden entrar en un estado alternativo llamado "dauer". En este estado, pueden sobrevivir hasta 4 meses sin alimentarse, reanudando su desarrollo normal cuando las condiciones mejoran.</p>
+            <p>La capacidad de C. elegans para alternar entre el desarrollo normal y el estado dauer ha sido objeto de extensos estudios sobre los mecanismos de envejecimiento y longevidad. El estado dauer implica cambios metabólicos profundos y una mayor resistencia al estrés, lo que ha llevado a descubrimientos importantes sobre los mecanismos de supervivencia y adaptación celular.</p>
+            <p>Además, C. elegans exhibe un fenómeno conocido como "envejecimiento reproductivo", donde la fertilidad disminuye significativamente después de los primeros días de edad adulta. Este proceso ha sido utilizado como modelo para estudiar la senescencia reproductiva en organismos más complejos, incluidos los humanos.</p>
+        </section>
+
+        <section id="genetica">
+            <h2>Genética</h2>
+            <p>C. elegans tiene características genéticas únicas que lo hacen ideal para la investigación:</p>
+            <ul>
+                <li><strong>Genoma:</strong> Completamente secuenciado en 1998, consta de aproximadamente 100 millones de pares de bases.</li>
+                <li><strong>Genes:</strong> Alrededor de 20,000 genes codificantes de proteínas.</li>
+                <li><strong>Cromosomas:</strong> 6 cromosomas (5 autosomas y 1 cromosoma sexual).</li>
+                <li><strong>Sexo:</strong> Hermafroditas XX y machos XO. Los hermafroditas pueden autofecundarse o cruzarse con machos.</li>
+                <li><strong>Homología con humanos:</strong> Aproximadamente el 40% de sus genes tienen homólogos en humanos.</li>
+                <li><strong>ARN de interferencia (RNAi):</strong> C. elegans fue el primer organismo en el que se descubrió el RNAi, una herramienta poderosa para el silenciamiento génico.</li>
+                <li><strong>Epigenética:</strong> Presenta mecanismos epigenéticos conservados, incluyendo modificaciones de histonas y metilación del ADN.</li>
+                <li><strong>microARNs:</strong> Fue el organismo en el que se descubrieron los primeros microARNs, cruciales en la regulación génica.</li>
+                <li><strong>Splicing alternativo:</strong> Exhibe patrones complejos de splicing alternativo, permitiendo el estudio de este proceso fundamental.</li>
+            </ul>
+            <p>La facilidad de manipulación genética en C. elegans ha permitido la creación de miles de cepas mutantes, cada una con características específicas. Estas cepas son ampliamente compartidas entre laboratorios, facilitando la investigación colaborativa.</p>
+            <p>Además, la capacidad de crear animales transgénicos que expresan proteínas fluorescentes ha revolucionado el estudio de la expresión génica y la localización de proteínas in vivo. Esta técnica permite visualizar procesos celulares y moleculares en tiempo real en un organismo vivo.</p>
+            <p>La genética de C. elegans también ha sido fundamental para entender los mecanismos de la herencia epigenética, incluyendo la transmisión de estados de la cromatina a través de generaciones. Esto ha proporcionado insights valiosos sobre cómo las experiencias ambientales pueden influir en la expresión génica a largo plazo.</p>
+            <p>El estudio de los elementos transponibles en C. elegans ha llevado a descubrimientos importantes sobre la regulación génica y la evolución del genoma. Además, la investigación en este organismo ha sido crucial para comprender los mecanismos de reparación del ADN y mantenimiento de los telómeros, procesos fundamentales para la estabilidad genómica y el envejecimiento.</p>
+        </section>
+
+        <section id="investigacion">
+            <h2>Importancia en la Investigación</h2>
+            <p>C. elegans es crucial en la investigación biológica por varias razones:</p>
+            <ul>
+                <li><strong>Facilidad de cultivo:</strong> Crecimiento rápido en placas de agar con bacterias E. coli como alimento.</li>
+                <li><strong>Ciclo de vida corto:</strong> Permite estudios rápidos de múltiples generaciones.</li>
+                <li><strong>Transparencia:</strong> Facilita la observación de procesos internos en tiempo real.</li>
+                <li><strong>Linaje celular:</strong> El destino de cada célula desde el huevo hasta el adulto está mapeado.</li>
+                <li><strong>Manipulación genética:</strong> Fácil creación de mutantes y animales transgénicos.</li>
+                <li><strong>Modelo de enfermedades:</strong> Útil para estudiar mecanismos de enfermedades humanas.</li>
+                <li><strong>Neurobiología:</strong> Su sistema nervioso simple permite estudios detallados de circuitos neuronales.</li>
+                <li><strong>Estudios de envejecimiento:</strong> Su corta vida facilita la investigación sobre longevidad.</li>
+                <li><strong>Desarrollo embrionario:</strong> Modelo ideal para estudiar los procesos de desarrollo temprano.</li>
+                <li><strong>Apoptosis:</strong> Ha sido fundamental en la comprensión de la muerte celular programada.</li>
+                <li><strong>Señalización celular:</strong> Permite el estudio de vías de señalización conservadas evolutivamente.</li>
+                <li><strong>Comportamiento:</strong> Modelo para estudiar bases genéticas y neuronales del comportamiento.</li>
+            </ul>
+            <p>C. elegans ha sido fundamental en el estudio de procesos biológicos conservados evolutivamente, como la apoptosis, el desarrollo embrionario y la señalización celular. Su uso ha llevado a descubrimientos aplicables a organismos más complejos, incluidos los humanos.</p>
+            <p>Además, C. elegans se utiliza cada vez más en estudios de toxicología y farmacología, sirviendo como un modelo de screening inicial para nuevos compuestos terapéuticos. Su simplicidad y la conservación de muchas vías metabólicas lo hacen ideal para evaluar la toxicidad y eficacia de fármacos antes de pasar a modelos más complejos.</p>
+            <p>En el campo de la neurociencia, C. elegans ha sido invaluable para comprender cómo los circuitos neuronales generan comportamientos complejos. Su conectoma completamente mapeado (el diagrama de todas las conexiones neuronales) proporciona una base única para estudiar cómo la estructura del sistema nervioso se relaciona con su función.</p>
+            <p>Los estudios en C. elegans también han contribuido significativamente a nuestra comprensión de la plasticidad sináptica, la base celular del aprendizaje y la memoria. Aunque su sistema nervioso es simple, exhibe formas de aprendizaje y memoria que son sorprendentemente similares a las de organismos más complejos.</p>
+            <p>En el ámbito de la biología del estrés y la adaptación, C. elegans ha proporcionado insights valiosos sobre cómo los organismos responden y se adaptan a diversos estresores ambientales, desde el estrés oxidativo hasta los cambios de temperatura.</p>
+        </section>
+
+        <section id="descubrimientos">
+            <h2>Descubrimientos Clave</h2>
+            <p>La investigación en C. elegans ha llevado a importantes descubrimientos, incluyendo:</p>
+            <ul>
+                <li><strong>Apoptosis:</strong> Identificación de los genes clave involucrados en la muerte celular programada (ced-3, ced-4, ced-9).</li>
+                <li><strong>ARN de interferencia (RNAi):</strong> Descubrimiento del mecanismo de silenciamiento génico por ARN de doble cadena.</li>
+                <li><strong>Envejecimiento:</strong> Identificación de genes que regulan la longevidad, como daf-2 e daf-16, que forman parte de la vía de señalización de la insulina/IGF-1.</li>
+                <li><strong>Desarrollo de órganos:</strong> Comprensión de los mecanismos moleculares que guían la formación de órganos, incluyendo la inducción vulvar y el desarrollo de la gónada.</li>
+                <li><strong>Sinapsis neuronales:</strong> Elucidación de los mecanismos de formación y función de las sinapsis, incluyendo el descubrimiento de proteínas clave como UNC-13.</li>
+                <li><strong>MicroARNs:</strong> Descubrimiento de los primeros microARNs (lin-4 y let-7) y su papel en el desarrollo y la regulación génica.</li>
+                <li><strong>Cáncer:</strong> Identificación de genes supresores de tumores y oncogenes conservados en humanos, como let-60 (homólogo de RAS).</li>
+                <li><strong>Señalización celular:</strong> Caracterización de vías de señalización conservadas, como Notch y Wnt, fundamentales en el desarrollo y la homeostasis celular.</li>
+                <li><strong>Determinación sexual:</strong> Comprensión de los mecanismos genéticos que controlan la determinación y diferenciación sexual.</li>
+                <li><strong>Autofagia:</strong> Identificación de genes esenciales para la autofagia, un proceso celular crucial para la supervivencia y el envejecimiento.</li>
+            </ul>
+            <p>Estos descubrimientos han sido reconocidos con tres Premios Nobel:</p>
+            <ol>
+                <li><strong>2002:</strong> Sydney Brenner, H. Robert Horvitz y John Sulston por sus descubrimientos sobre la regulación genética del desarrollo de órganos y la muerte celular programada.</li>
+                <li><strong>2006:</strong> Andrew Fire y Craig Mello por su descubrimiento del ARN de interferencia.</li>
+                <li><strong>2008:</strong> Martin Chalfie (junto con Osamu Shimomura y Roger Y. Tsien) por el descubrimiento y desarrollo de la proteína fluorescente verde (GFP).</li>
+            </ol>
+            <p>Estos avances han tenido un impacto significativo en campos como la biología del desarrollo, la genética, la neurobiología y la investigación biomédica en general. Han proporcionado herramientas y conocimientos fundamentales que se aplican en la investigación de enfermedades humanas, el desarrollo de nuevos fármacos y la comprensión de procesos biológicos básicos.</p>
+            <p>Además, los descubrimientos en C. elegans han sido pioneros en el desarrollo de técnicas de edición genética, como CRISPR-Cas9, que ahora se utilizan ampliamente en la investigación biomédica y tienen potenciales aplicaciones terapéuticas.</p>
+        </section>
+
+        <section id="datos-curiosos">
+            <h2>Datos Curiosos</h2>
+            <ul id="curiosidades">
+                <!-- Los datos curiosos se cargarán con JavaScript -->
+            </ul>
+        </section>
+
+        <section id="mas-informacion">
+            <h2>Más Información</h2>
+            <p>Si deseas profundizar en el fascinante mundo de C. elegans, aquí tienes algunos recursos valiosos:</p>
+            <ul>
+                <li><a href="https://wormbase.org/" target="_blank" rel="noopener noreferrer">WormBase</a> - Base de datos genómica y biológica de C. elegans</li>
+                <li><a href="https://www.wormatlas.org/" target="_blank" rel="noopener noreferrer">WormAtlas</a> - Atlas anatómico detallado de C. elegans</li>
+                <li><a href="https://www.wormbook.org/" target="_blank" rel="noopener noreferrer">WormBook</a> - Revisión completa y actualizada de la biología de C. elegans</li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK19650/" target="_blank" rel="noopener noreferrer">C. elegans II</a> - Libro completo sobre C. elegans (2nd edition)</li>
+                <li><a href="https://www.nature.com/subjects/caenorhabditis-elegans" target="_blank" rel="noopener noreferrer">Nature: C. elegans</a> - Artículos científicos recientes sobre C. elegans</li>
+                <li><a href="https://www.genetics.org/collection/c-elegans" target="_blank" rel="noopener noreferrer">Genetics Society of America: C. elegans</a> - Colección de artículos sobre genética en C. elegans</li>
+                <li><a href="https://www.microptics-usa.com/c-elegans" target="_blank" rel="noopener noreferrer">MicroOptics: C. elegans Resources</a> - Recursos y protocolos para trabajar con C. elegans</li>
+                <li><a href="https://www.addgene.org/C._elegans/" target="_blank" rel="noopener noreferrer">Addgene: C. elegans Plasmids and Resources</a> - Repositorio de plásmidos y recursos genéticos para C. elegans</li>
+                <li><a href="https://www.youtube.com/watch?v=JdK0Uh3YxWw" target="_blank" rel="noopener noreferrer">iBiology: C. elegans Research</a> - Serie de videos educativos sobre investigación en C. elegans</li>
+            </ul>
+        </section>
+
+        <section id="efectos-sustancias">
+            <h2>Efectos de Sustancias en C. elegans</h2>
+            <p>C. elegans es ampliamente utilizado en estudios toxicológicos y farmacológicos. Selecciona una sustancia para ver sus efectos:</p>
+            <div class="substance-selector">
+                <!-- Los botones de sustancias se generarán dinámicamente con JavaScript -->
+            </div>
+            <div id="substance-info" class="substance-info">
+                <h3 id="substance-name"></h3>
+                <p id="substance-effect"></p>
+                <h4>Detalles del efecto:</h4>
+                <ul id="substance-details"></ul>
+                <h4>Mecanismo de acción:</h4>
+                <p id="substance-mechanism"></p>
+                <h4>Implicaciones para la investigación:</h4>
+                <p id="substance-implications"></p>
+                <h4>Consideraciones éticas:</h4>
+                <p id="substance-ethics"></p>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 WormBook. Todos los derechos reservados.</p>
+        <p>&copy; 2023 Página Informativa sobre C. elegans | Creado con fines educativos</p>
     </footer>
 
     <script src="script.js"></script>
