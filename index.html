@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WormBook - The Online Review of C. elegans Biology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="dynamic-background"></div>
+    <header>
+    <div class="theme-toggle fixed">
+        <button id="theme-toggle-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    <div class="animated-header">
+        <h1 class="fade-in-text">WormBook</h1>
+        <p class="subtitle fade-in-text">THE ONLINE REVIEW OF C. elegans BIOLOGY</p>
+    </div>
+    <nav class="navbar">
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> Hogar</a>
+            <a href="#"><i class="fas fa-info-circle"></i> Acerca de</a>
+            <a href="#"><i class="fas fa-envelope"></i> Contacto</a>
+            <a href="#"><i class="fas fa-quote-right"></i> Citar WormBook</a>
+            <a href="#"><i class="fas fa-users"></i> Para autores</a>
+            <a href="#"><i class="fas fa-download"></i> Descargas</a>
+            <a href="#"><i class="fas fa-handshake"></i> Patrocinadores</a>
+        </div>
+    </nav>
+</header>
+
+    <main class="parallax">
+        <section class="search-section">
+            <div class="search-container">
+                <form id="search-form">
+                    <div class="format-options">
+                        <label><input type="checkbox" checked> HTML</label>
+                        <label><input type="checkbox"> PDF</label>
+                    </div>
+                    <div class="search-box">
+                        <input type="search" placeholder="Buscar en WormBook...">
+                        <button type="submit">Buscar</button>
+                    </div>
+                    <div class="search-alt">
+                        <span>o</span>
+                        <a href="#" class="textpresso-link">busca con Textpresso</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="description">
+                <p>WormBook es una colección completa y de acceso abierto de capítulos originales revisados por pares que cubren temas relacionados con la biología de <em>Caenorhabditis elegans</em> y otros nematodos.</p>
+            </div>
+
+            <div class="sections">
+                <h2>Secciones de WormBook</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <div class="card-image">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3>Genética y genómica</h3>
+                    </div>
+                    <div class="topic-card">
+                        <div class="card-image">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Control del desarrollo</h3>
+                    </div>
+                    <div class="topic-card">
+                        <div class="card-image">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Transducción de señales</h3>
+                    </div>
+                    <div class="topic-card">
+                        <div class="card-image">
+                            <i class="fas fa-atom"></i>
+                        </div>
+                        <h3>Biología molecular</h3>
+                    </div>
+                    <div class="topic-card">
+                        <div class="card-image">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Neurobiología</h3>
+                    </div>
+                    <div class="topic-card">
+                        <div class="card-image">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3>Evolución y ecología</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WormBook. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
